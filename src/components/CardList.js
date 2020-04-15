@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 const CardList = ({robots}) => {
-	return(
+	return Object.keys(robots).length>0 ?(
 	<div>
 	{
 		robots.map((user, i) => {
@@ -16,7 +16,7 @@ const CardList = ({robots}) => {
 		})
 	}
 	</div>
-	);
+	): <h3>No Results</h3>;
 }
 
 export default CardList;
